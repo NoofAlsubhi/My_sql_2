@@ -1,18 +1,6 @@
-
-```
--- Create an index to search using student names alphabetically.
-
-CREATE INDEX names
-ON students(student_name); 
-
-
--- display index.
-
-SHOW INDEX FROM students;
-
-
--- delete index.
-DROP INDEX names ON students;
-
-
+```{mysql}
+select user, host, password as pwd
+from user u
+where user = 'root'
+order by user, host;
 ```
