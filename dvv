@@ -1,7 +1,18 @@
 
+```
+-- Create an index to search using student names alphabetically.
 
-```ruby
-require 'redcarpet'
-markdown = Redcarpet.new("Hello World!")
-puts markdown.to_html
+CREATE INDEX names
+ON students(student_name); 
+
+
+-- display index.
+
+SHOW INDEX FROM students;
+
+
+-- delete index.
+DROP INDEX names ON students;
+
+
 ```
