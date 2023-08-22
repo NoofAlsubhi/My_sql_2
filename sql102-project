@@ -1,0 +1,109 @@
+/*
+
+ project is complementary to the SQL102
+
+Requirements:
+
+Create a table for outstanding students from the Students table, so that this table contains data for students whose cumulative GPA is higher than 90.
+Create a table for non-pass students from the students table, so that this table contains data for students whose cumulative average is less than 60.
+Show student names beginning with A.
+Show the names of students whose names contain four characters.
+Apply the Aggregate functions (AVG, MAX, MIN) to a student's GPA with a clear label for the output.
+Listing and displaying the names of outstanding students in the sixth level with a cumulative average of 100.
+Displays the number of students in level 2.
+Show student major in the school without repetition.
+Display courses names displayed in capital letters.
+Show the mean of the GPA and round the number to the nearest number (using numeric functions).
+Updating the GPA for students whose GPA is less than 60 and increasing their GPA by five points.
+
+*/
+
+
+--  Create a table for outstanding students from the Students table, so that this table contains data for students whose cumulative GPA is higher than 90.
+
+CREATE TABLE excellent_students
+SELECT * FROM students where student_gpa > 90 ;
+
+SELECT * FROM excellent_students ;
+
+
+
+-- Create a table for non-pass students from the students table, so that this table contains data for students whose cumulative average is less than 60.
+
+CREATE TABLE non_passing_students
+SELECT * FROM students where student_gpa < 60 ;
+
+SELECT * FROM  non_passing_students ;
+
+
+
+
+--  Show student names beginning with A.
+
+SELECT * FROM students
+ WHERE student_name like 'A%';
+
+
+
+--  Show the names of students whose names contain four characters.
+
+SELECT * FROM students
+ WHERE student_name like '____';
+
+
+
+-- Apply the Aggregate functions (AVG, MAX, MIN) to a student's GPA with a clear label for the output.
+
+SELECT AVG (student_gpa) AS AVG_Student_gpa
+FROM students ;
+
+SELECT MAX(student_gpa) AS MAX_Student_gpa
+FROM students ;
+
+
+SELECT MIN(student_gpa) AS MIN_Student_gpa
+FROM students ;
+
+
+
+
+-- Listing and displaying the names of outstanding students in the sixth level with a cumulative average of 100.
+
+SELECT * FROM students 
+WHERE student_level = 6 AND student_gpa= 100 ;
+
+
+
+
+
+--  Displays the number of students in level 2.
+
+SELECT COUNT(*) FROM students 
+WHERE student_level = 2 ;
+
+
+
+--  Show student major in the school without repetition.
+
+SELECT DISTINCT student_major FROM students  ;
+
+
+
+-- Display courses names displayed in capital letters.
+
+SELECT UPPER(course_name) FROM courses;
+
+
+
+
+-- Show the mean of the GPA and round the number to the nearest number (using numeric functions).
+
+SELECT round(sum(student_gpa ) /  COUNT(student_id)) FROM students;
+
+
+
+
+
+
+
+
