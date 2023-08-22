@@ -1,4 +1,4 @@
-# Satr Platform course projects:
+# Satr Platform courses(SQL101, SQL102) projects:
 
 
 
