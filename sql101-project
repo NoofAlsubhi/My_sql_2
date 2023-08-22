@@ -1,5 +1,4 @@
- 
-/*
+ /*
 project
 Using what you learned during this course, apply the following: Suppose there is a school in the name of Alrayan_School, and we want to create a central database to include all the information of teachers, students and courses, knowing that the following information must be stored for each student (student serial number, student name, date of birth, Student's gender, enrollment date, student's email, academic level, major, student's GPA) and teachers' information as follows (teacher's serial number, teacher's name, date of birth, teacher's gender, teacher's email, office number) and courses information as follows (serial number of the course , course Name).
 
