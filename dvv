@@ -1,6 +1,0 @@
-```{mysql}
-select user, host, password as pwd
-from user u
-where user = 'root'
-order by user, host;
-```
